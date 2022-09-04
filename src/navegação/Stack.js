@@ -8,23 +8,23 @@ import PassoStack from "../components/PassoStack";
 const Stack = createNativeStackNavigator()
 
 export default props => (
-    <Stack.Navigator initialRouteName="TelaA" screenOptions={{headerShown: true}}> 
-        <Stack.Screen name="Tela A" options={{title: 'Informações Iniciais'}}>
+    <Stack.Navigator initialRouteName="TelaA" screenOptions={{ headerShown: true }}>
+        <Stack.Screen name="TelaA" options={{ title: 'Informações Iniciais' }}>
             {props => (
                 <PassoStack {...props} avancar="TelaB">
                     <TelaA />
                 </PassoStack>
             )}
         </Stack.Screen>
-        <Stack.Screen name="Tela B"options={{title: 'Outras informações'}}>
-        {props => (
+        <Stack.Screen name="TelaB" options={{ title: 'Outras informações' }}>
+            {props => (
                 <PassoStack {...props} avancar="TelaC">
-                    <TelaB/>
+                    <TelaB />
                 </PassoStack>
             )}
         </Stack.Screen>
-        <Stack.Screen name="Tela C" component={TelaC} options={{title: 'Última Tela'}}/>
+        <Stack.Screen name="TelaC" component={TelaC} options={{ title: 'Última Tela' }} />
     </Stack.Navigator>
 )
 
-{/*  */}
+{/*  */ }

@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Text, View } from "react-native";
+import TelaB from "../views/TelaB";
 
 export default props => (
     <View style={{ flex: 1}}>
